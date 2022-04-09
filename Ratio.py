@@ -7,7 +7,7 @@ import datetime as dt
 import pytz
 
 def sharpe_rate(df):
-    sharpe_ratios = (df.mean() * 365) / (df.std() * np.sqrt(365))
+    sharpe_ratios = (df.mean() * 730) / (df.std() * np.sqrt(730))
     return sharpe_ratios
 
 def beta(main,brenchmark,period):
@@ -15,6 +15,52 @@ def beta(main,brenchmark,period):
     variance = brenchmark.rolling(window=period).var()
     beta = covariance / variance
     return beta
+
+
+def markowitz():
+    np.random.seed(42)
+    num_ports = 6000
+    all_weights = np.zeros((num_ports, len(stocks.columns)))
+    ret_arr = np.zeros(num_ports)
+    vol_arr = np.zeros(num_ports)
+    sharpe_arr = np.zeros(num_ports)
+
+    for x in range(num_ports):
+        # Weights
+        weights = np.array(np.random.random(4))
+        weights = weights/np.sum(weights)
+        
+        # Save weights
+        all_weights[x,:] = weights
+        
+        # Expected return
+        ret_arr[x] = np.sum( (log_ret.mean() * weights * 730))
+        
+        # Expected volatility
+        vol_arr[x] = np.sqrt(np.dot(weights.T, np.dot(log_ret.cov()*730, weights)))
+        
+        # Sharpe Ratio
+        sharpe_arr[x] = ret_arr[x]/vol_arr[x]
+
+def get_ret_vol_sr(weights):
+    weights = np.array(weights)
+    ret = np.sum(log_ret.mean() * weights) * 730
+    vol = np.sqrt(np.dot(weights.T, np.dot(log_ret.cov()*730, weights)))
+    sr = ret/vol
+    return np.array([ret, vol, sr])
+
+def neg_sharpe(weights):
+# the number 2 is the sharpe ratio index from the get_ret_vol_sr
+    return get_ret_vol_sr(weights)[2] * -1
+
+def check_sum(weights):
+    #return 0 if sum of the weights is 1
+    return np.sum(weights)-1
+
+def minimize_volatility(weights):
+    return get_ret_vol_sr(weights)[1]
+
+
 
 class MCSimulation:
     """
@@ -39,7 +85,7 @@ class MCSimulation:
         
     """
     
-    def __init__(self, portfolio_data, weights="", num_simulation=1000, num_trading_days=365):
+    def __init__(self, portfolio_data, weights="", num_simulation=1000, num_trading_days=730):
         """
         Constructs all the necessary attributes for the MCSimulation object.
 
