@@ -7,12 +7,12 @@ import datetime as dt
 import pytz
 
 def sharpe_rate(df):
-    sharpe_ratios = (df.mean() * 252) / (df.std() * np.sqrt(252))
+    sharpe_ratios = (df.mean() * 365) / (df.std() * np.sqrt(365))
     return sharpe_ratios
 
-def beta(main,brenchmark):
-    covariance = main.rolling(window=60).cov(brenchmark)
-    variance = brenchmark.rolling(window=60).var()
+def beta(main,brenchmark,period):
+    covariance = main.rolling(window=period).cov(brenchmark)
+    variance = brenchmark.rolling(window=period).var()
     beta = covariance / variance
     return beta
 
