@@ -33,6 +33,8 @@ def markowitz(df):
     plt.plot(sigma, exp_return, 'ro', alpha=0.1)
     plt.show()
 
+
+
 class MCSimulation:
     """
     A Python class for runnning Monte Carlo simulation on portfolio price data. 
