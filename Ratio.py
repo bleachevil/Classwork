@@ -2,8 +2,7 @@ import pandas as pd
 import numpy as np
 import datetime as dt
 import os
-import alpaca_trade_api as tradeapi
-import datetime as dt
+import matplotlib.pyplot as plt
 import pytz
 
 def sharpe_rate(df):
@@ -16,51 +15,23 @@ def beta(main,brenchmark,period):
     beta = covariance / variance
     return beta
 
+def markowitz(df):
 
-def markowitz():
-    np.random.seed(42)
-    num_ports = 6000
-    all_weights = np.zeros((num_ports, len(stocks.columns)))
-    ret_arr = np.zeros(num_ports)
-    vol_arr = np.zeros(num_ports)
-    sharpe_arr = np.zeros(num_ports)
-
-    for x in range(num_ports):
-        # Weights
-        weights = np.array(np.random.random(4))
-        weights = weights/np.sum(weights)
-        
-        # Save weights
-        all_weights[x,:] = weights
-        
-        # Expected return
-        ret_arr[x] = np.sum( (log_ret.mean() * weights * 730))
-        
-        # Expected volatility
-        vol_arr[x] = np.sqrt(np.dot(weights.T, np.dot(log_ret.cov()*730, weights)))
-        
-        # Sharpe Ratio
-        sharpe_arr[x] = ret_arr[x]/vol_arr[x]
-
-def get_ret_vol_sr(weights):
-    weights = np.array(weights)
-    ret = np.sum(log_ret.mean() * weights) * 730
-    vol = np.sqrt(np.dot(weights.T, np.dot(log_ret.cov()*730, weights)))
-    sr = ret/vol
-    return np.array([ret, vol, sr])
-
-def neg_sharpe(weights):
-# the number 2 is the sharpe ratio index from the get_ret_vol_sr
-    return get_ret_vol_sr(weights)[2] * -1
-
-def check_sum(weights):
-    #return 0 if sum of the weights is 1
-    return np.sum(weights)-1
-
-def minimize_volatility(weights):
-    return get_ret_vol_sr(weights)[1]
-
-
+    years = 2
+    returns = df.pct_change()
+    cagr = (df.iloc[-1] / df.iloc[0]) ** (1 / years) - 1
+    cov = returns.cov()
+    def random_weights(n):
+        k = np.random.rand(n)
+        return k / sum(k)
+    exp_return = []
+    sigma = []
+    for _ in range(20000):
+        w = random_weights(len(df.columns))
+        exp_return.append(np.dot(w, cagr.T))
+        sigma.append(np.sqrt(np.dot(np.dot(w.T, cov), w)))
+    plt.plot(sigma, exp_return, 'ro', alpha=0.1)
+    plt.show()
 
 class MCSimulation:
     """
