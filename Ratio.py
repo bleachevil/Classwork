@@ -9,7 +9,7 @@ import pytz
 def sharpe_rate(df):
     sharpe_ratios = (df.mean() * 730) / (df.std() * np.sqrt(730))
     # return sharpe_ratios
-    sp = sharpe_ratios.plot.bar(figsize=(20,10))
+    sp = sharpe_ratios.plot.bar(figsize=(20,10),title = "Sharpe Ratio for All Token")
     # sp.show()
     return sp
     
