@@ -29,33 +29,18 @@ def markowitz(df):
     def random_weights(n):
         k = np.random.rand(n)
         return k / sum(k)
-    exp_return = []
-    sigma = []
-    weight = []
+    exp_return = 0
+    sigma = 0
     
-    for _ in range(10):
+    for _ in range(1):
         w = random_weights(len(df.columns))
-        # w = [1, 0]
-        exp_return.append(np.dot(w, cagr.T))
-        sigma.append(np.sqrt(np.dot(np.dot(w.T, cov), w)))
-        weight.append(w)
-    
-    d = {'weight': weight, 'risk': sigma, 'return': exp_return}
-    df = pd.DataFrame(data=d)
-    
-    plt.plot(sigma, exp_return, 'ro', alpha=0.1)
-    plt.show()
-
-    return df
+        exp_return = np.dot(w, cagr.T)
+        sigma = (np.sqrt(np.dot(np.dot(w.T, cov), w)))
         
-    # return exp_return
+    return sigma, exp_return
     
-#     hvplot.plot(sigma, exp_return, 'ro', alpha=0.1)
-#     hvplot.show()
-    
-#     df.hvplot.scatter(x='risk', y='return', by='species', 
-#                   legend='top', height=400, width=400)
-    
+    # plt.plot(sigma, exp_return, 'ro', alpha=0.1)
+    # plt.show()
 
 class MCSimulation:
     """
