@@ -4,10 +4,15 @@ import datetime as dt
 import os
 import matplotlib.pyplot as plt
 import pytz
+# import hvplot.pandas 
 
 def sharpe_rate(df):
     sharpe_ratios = (df.mean() * 730) / (df.std() * np.sqrt(730))
-    return sharpe_ratios
+    # return sharpe_ratios
+    sp = sharpe_ratios.plot.bar(figsize=(20,10),title = "Sharpe Ratio for All Token")
+    # sp.show()
+    return sp
+    
 
 def beta(main,brenchmark,period):
     covariance = main.rolling(window=period).cov(brenchmark)
@@ -24,14 +29,18 @@ def markowitz(df):
     def random_weights(n):
         k = np.random.rand(n)
         return k / sum(k)
-    exp_return = []
-    sigma = []
-    for _ in range(20000):
+    exp_return = 0
+    sigma = 0
+    
+    for _ in range(1):
         w = random_weights(len(df.columns))
-        exp_return.append(np.dot(w, cagr.T))
-        sigma.append(np.sqrt(np.dot(np.dot(w.T, cov), w)))
-    plt.plot(sigma, exp_return, 'ro', alpha=0.1)
-    plt.show()
+        exp_return = np.dot(w, cagr.T)
+        sigma = (np.sqrt(np.dot(np.dot(w.T, cov), w)))
+        
+    return sigma, exp_return
+    
+    # plt.plot(sigma, exp_return, 'ro', alpha=0.1)
+    # plt.show()
 
 class MCSimulation:
     """
