@@ -113,7 +113,7 @@ Generally, a higher sharpe ratio indicates a higher return given the level of ri
 
 Based on the findings of the Sharpe ratio alone, it is fair to say that XRP generally has a higher risk adjusted performance compared to the other tokens.
 
-When comparing to the benchmark, Solana and Fantom fall short. 
+Comparing to the benchmark, Solana and Fantom fall short while the other six tokens are outperforming.
 
 ### Beta & Rolling Beta
 
