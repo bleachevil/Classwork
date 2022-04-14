@@ -210,7 +210,7 @@ class MCSimulation:
 
 def plot_MC(df,name, num_days): 
     #df = get_data(ticker, start_date, end_date)
-    initial_price = 200 #df.iloc[-1].values[0]
+    initial_price = 1000 #df.iloc[-1].values[0]
 
     pct_changes = df.pct_change()
     pct_changes.dropna(inplace=True)
@@ -244,8 +244,8 @@ def plot_MC(df,name, num_days):
     low_bound =  np.mean(closing_prices_as_of_last_day)  - 2*np.std(closing_prices_as_of_last_day)
     upper_bound =  np.mean(closing_prices_as_of_last_day)  + 2*np.std(closing_prices_as_of_last_day)
 
-    print(f"The starting closing price at the end of this period was {initial_price}")
-    print(f"The expected return on {name} is {expected_return} and the closing price will be between {low_bound} and {upper_bound} with 95% confidence in the next {num_days} trading days")
+    print(f"The iniital investment was {initial_price}")
+    print(f"The expected return on {name} is {expected_return} will be between {low_bound} and {upper_bound} with 95% confidence in the next {num_days} trading days")
     return low_bound, upper_bound
     
     
