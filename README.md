@@ -143,13 +143,21 @@ Given that we have only two years of data, we decided to run the simulation for 
 Using the formulas and functions in [ratio.py](https://github.com/bleachevil/Classwork/blob/f88b8ef9929a5e53206270f5fea80ab7c2ad4ae1/Ratio.py) , we conducted a simulation for each of the eight tokens.
 
 
+<img width="819" alt="Screen Shot 2022-04-14 at 7 32 43 PM" src="https://user-images.githubusercontent.com/99091066/163493287-45c828ce-f8f7-4d59-9244-421a8c27da3d.png">
 
+<img width="821" alt="Screen Shot 2022-04-14 at 7 33 00 PM" src="https://user-images.githubusercontent.com/99091066/163493306-b2994397-02df-4827-ad65-935e9e9cc0b7.png">
 
+<img width="819" alt="Screen Shot 2022-04-14 at 7 33 54 PM" src="https://user-images.githubusercontent.com/99091066/163493371-e6cd8a45-24b6-4604-93f0-d097e8f8b716.png">
 
+<img width="826" alt="Screen Shot 2022-04-14 at 7 34 14 PM" src="https://user-images.githubusercontent.com/99091066/163493394-cebf08fe-8e40-4195-b0de-049fc3589f02.png">
 
+<img width="822" alt="Screen Shot 2022-04-14 at 7 34 36 PM" src="https://user-images.githubusercontent.com/99091066/163493418-b08c88f0-017c-40c7-9e82-c622d1c0adc4.png">
 
+<img width="818" alt="Screen Shot 2022-04-14 at 7 37 52 PM" src="https://user-images.githubusercontent.com/99091066/163493631-4c108d8e-3aa5-4f8f-8b33-49226ee33551.png">
 
+<img width="816" alt="Screen Shot 2022-04-14 at 7 38 12 PM" src="https://user-images.githubusercontent.com/99091066/163493655-2a0baced-2e04-428d-9b9d-828d75d9ca88.png">
 
+<img width="825" alt="Screen Shot 2022-04-14 at 7 38 33 PM" src="https://user-images.githubusercontent.com/99091066/163493677-f8a94324-23a5-4572-af0e-1249c67ba669.png">
 
 
 
