@@ -117,10 +117,16 @@ Comparing to the benchmark, Solana and Fantom fall short while the other six tok
 
 ### Beta & Rolling Beta
 
+We calculated and plotted the 30 day rolling beta for each token, using 730 trading days. A higher beta indicates a riskier asset. Based on the graph below, it is is evident that Ethereum is the riskiest token as it experiences several spikes over the 2 year period, the highest point being in early 2021. Around this time, Ethereum reached an all time high and the price appreciated by 135% from December 2020 to January 2021 [Source](https://investorplace.com/2021/01/find-other-ways-to-invest-in-cryptocurrencies-than-ethereum/) .
+
+The rapid increase in prices would cause uncertainty in the markets and fears that the bubble would eventually burst. 
 
 
+<img width="832" alt="Screen Shot 2022-04-14 at 6 37 15 PM" src="https://user-images.githubusercontent.com/99091066/163489062-c570ff8a-82ec-49d3-bf75-26d59a1a55cd.png">
 
+The other tokens are relatively steady, hovering around a beta of 0. 
 
+### Monte Carlo Simulation
 
 
 
