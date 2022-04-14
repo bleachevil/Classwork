@@ -12,7 +12,7 @@ def sharpe_rate(df):
     # return sharpe_ratios
     sp = sharpe_ratios.plot.bar(figsize=(20,10),title = "Sharpe Ratio for All Token")
     # sp.show()
-    return sp
+    return sp, sharpe_ratios
     
 
 def beta(main,brenchmark,period):
@@ -237,7 +237,7 @@ def plot_MC(df,name, num_days):
 
         realizations.append(current_price_history)
 
-    plt.show()
+    plt.show()    
 
     closing_prices_as_of_last_day = [x[-1] for x in realizations]
     expected_return = (np.mean(closing_prices_as_of_last_day) - initial_price)/initial_price
@@ -246,6 +246,9 @@ def plot_MC(df,name, num_days):
 
     print(f"The starting closing price at the end of this period was {initial_price}")
     print(f"The expected return on {name} is {expected_return} and the closing price will be between {low_bound} and {upper_bound} with 95% confidence in the next {num_days} trading days")
+    return low_bound, upper_bound
+    
+    
 
     #low_bound =  np.mean(closing_prices_as_of_last_day)  - 1*np.std(closing_prices_as_of_last_day)
     #upper_bound =  np.mean(closing_prices_as_of_last_day)  + 1*np.std(closing_prices_as_of_last_day)
