@@ -1,1 +1,95 @@
-Fintech Assignment 1
+# PROJECT OVERVIEW 
+
+A cryptocurrency is a digital currency that serves as a store of value and medium of exhange through an online network that is not regulated by the government and uses blockchain technologies to track the transactions. DeFi or Decentralized Finance, refers to a financial system that has no central powers or authority.
+
+Since Bitcoin's release in 2009, cryptocurrencies have gained popularity and are now used as a common method of payment.
+
+Creating a product for a blockchain requires several steps, one being to recognize which platform is most suitable for the product, given trends, market conditions, prices and future projections.
+
+For this project, we used Coingecko to gather data on 8 transaction tokens in hopes to identify which platform is the most rewarding, given the performance of their top transaction tokens. This evaluation tool can be used for those who are introducing products to the blockchain.
+
+## Tokens to Analyze 
+ 
+ * Solana
+ * Tron
+ * Cronos
+ * Fantom
+ * Ethereum
+ * Binance
+ * Poly
+ * XRP
+
+# THE TEAM 
+
+Amira Ali | Jeff Zhang | Nadeem Hassan 
+
+# Tools & Resoures 
+
+## SOFTWARE & TECHNOLOGIES USED 
+
+
+ <img width="269" alt="Screen Shot 2022-04-14 at 4 13 59 PM" src="https://user-images.githubusercontent.com/99091066/163468356-ae335e88-997a-4ee4-ae0b-e929787c7230.png">
+
+  > Python, Jupyter Notebook, Coingecko API, Plotly for visualization purposes. 
+
+
+# DATA 
+
+We were limited by multiple factors when choosing which API to fetch our data from. We expolored several platforms however either the API was not readily available or it did not have data on the tokens we were analyzing. We found that Coingecko had all the data we needed to meet our objectives. 
+
+In order to have a fair evaluation tool, we had to ensure we had sufficient data for each token and a general starting point. We tested the API with different dates and tokens to decide the length of our data. All of the tokens had sufficient data from 2020 onwards, thus we decided to use 2 years worth of data (April 2020 - April 2022 ) or 730 days. 
+
+`pip install pycoingecko` and importing `CoinGeckoAPI` gave us access to the data we needed for the analysis. 
+
+First, we pulled historical prices, market capitalization, and volumes for each token and converted those into DataFrames. 
+The naming conventions are as follows: 
+
+Solana (price, market cap, volume) : `solaprice`, `solMC` , `volsol`
+
+Tron: `tronprice` , `tronMC`, `voltron`
+
+Cronos: `cronprice` , `volcron`, `cronMC`
+
+Fantom: `fantomprice`, `volfantom`, `fantomMC`
+
+Ethereum: `ethprice`, `voleth`, `ethMC`
+
+Binance: `bnbprice`, `volbnb`, `bnbmC`
+
+Poly: `polyprice`, `volpoly`, `polyMC`
+
+XRP: `ripprice`, `volrip`, `ripMC` ( The coingecko api ID for XRP is Ripple) 
+
+An excerpt of the code below shows our method of calling the XRP price by its coingecko ID, expressed in the currency, and the number data points we needed. We then changed `historic_pricerip` into a dataframe and called the Prices and Time columns.
+
+
+<img width="743" alt="Screen Shot 2022-04-14 at 4 33 58 PM" src="https://user-images.githubusercontent.com/99091066/163470971-5f9315aa-e3be-468b-9fcc-43c42cc7cc2f.png">
+
+The prices, market cap, and volume data for each token was then converted to a CSV file and pushed to github for cleaning & analysis. This can be found in the Data folder.
+
+The Prices, Market Cap, and Volume dataframes were all combined into one dataframe.
+
+<img width="1111" alt="Screen Shot 2022-04-14 at 4 46 46 PM" src="https://user-images.githubusercontent.com/99091066/163472580-70ce2d28-a546-4494-9dd2-c98134ce47ae.png">
+
+<img width="1111" alt="Screen Shot 2022-04-14 at 4 48 42 PM" src="https://user-images.githubusercontent.com/99091066/163472799-4c85d117-e413-471e-b0a3-16af85ba90bd.png">
+
+<img width="1090" alt="Screen Shot 2022-04-14 at 4 52 49 PM" src="https://user-images.githubusercontent.com/99091066/163473323-2620788e-accc-481e-aa75-8c6912b50e04.png">
+
+<img width="1103" alt="Screen Shot 2022-04-14 at 4 53 17 PM" src="https://user-images.githubusercontent.com/99091066/163473372-78593ee6-7167-46c8-8378-2d288fb67028.png">
+
+  > We concatenated the data together and dropped null values. The combined dataframes were renamed as `all_coins_df`, `all_vol_df` , `all_MC_df`
+
+
+# ANALYSIS
+
+
+
+
+
+
+
+
+
+
+
+
