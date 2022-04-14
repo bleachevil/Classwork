@@ -168,52 +168,52 @@ Using the formulas and functions in [ratio.py](https://github.com/bleachevil/Cla
 
 For each token, volume and market caps were plotted using plotly.
 
-Solana 
+### Solana 
 
 
 <img width="456" alt="Screen Shot 2022-04-14 at 7 48 47 PM" src="https://user-images.githubusercontent.com/99091066/163494410-272510a1-e630-456a-b853-5ee92f6f3a09.png">
 <img width="465" alt="Screen Shot 2022-04-14 at 7 49 04 PM" src="https://user-images.githubusercontent.com/99091066/163494422-e23b0d58-b3b3-401c-a25f-9bd553eb7d90.png">
 
 
-Binance 
+### Binance 
 
 <img width="459" alt="Screen Shot 2022-04-14 at 7 49 36 PM" src="https://user-images.githubusercontent.com/99091066/163494462-66e5008e-0c0b-45b1-8e7c-b0433f29c54d.png">
 
 <img width="461" alt="Screen Shot 2022-04-14 at 7 49 56 PM" src="https://user-images.githubusercontent.com/99091066/163494491-ba9839aa-d731-4a45-af8f-e565f5236940.png">
 
 
-Cronos
+### Cronos
 
 <img width="452" alt="Screen Shot 2022-04-14 at 7 50 17 PM" src="https://user-images.githubusercontent.com/99091066/163494519-6f91e608-94a6-40b3-86f8-ac2d8a27c1c5.png">
 
 <img width="444" alt="Screen Shot 2022-04-14 at 7 50 37 PM" src="https://user-images.githubusercontent.com/99091066/163494533-c9878a77-7443-4513-a534-d20c62085356.png">
 
-Ethereum
+### Ethereum
 
 <img width="443" alt="Screen Shot 2022-04-14 at 7 51 05 PM" src="https://user-images.githubusercontent.com/99091066/163494567-83df802d-1f9f-46cf-b9bc-4b0b5da02b76.png">
 
 <img width="448" alt="Screen Shot 2022-04-14 at 7 51 33 PM" src="https://user-images.githubusercontent.com/99091066/163494610-8a91071a-14e5-4c68-8b32-75a1d3bd8db1.png">
 
 
-Fantom
+### Fantom
 
 <img width="438" alt="Screen Shot 2022-04-14 at 7 52 04 PM" src="https://user-images.githubusercontent.com/99091066/163494651-a8d0f518-8d99-466c-b791-4173862db954.png">
 
 <img width="433" alt="Screen Shot 2022-04-14 at 7 52 17 PM" src="https://user-images.githubusercontent.com/99091066/163494672-f632c115-2266-4491-8441-ac89930ebc26.png">
 
-Polymath
+### Polymath
 
 <img width="457" alt="Screen Shot 2022-04-14 at 7 52 32 PM" src="https://user-images.githubusercontent.com/99091066/163494687-353f221a-ad6a-4567-8821-d6a5efff6d78.png">
 
 <img width="456" alt="Screen Shot 2022-04-14 at 7 52 52 PM" src="https://user-images.githubusercontent.com/99091066/163494719-699c0c54-4b46-4cea-8363-1e106c0774bb.png">
 
-Tron
+### Tron
 
 <img width="451" alt="Screen Shot 2022-04-14 at 7 53 16 PM" src="https://user-images.githubusercontent.com/99091066/163494744-78d66908-f7c8-4497-a373-5c24063335ba.png">
 
 <img width="446" alt="Screen Shot 2022-04-14 at 7 53 31 PM" src="https://user-images.githubusercontent.com/99091066/163494766-1a2a4f2e-a47f-4092-b1b4-ad3348c6bf8a.png">
 
-XRP
+### XRP
 
 <img width="444" alt="Screen Shot 2022-04-14 at 7 54 03 PM" src="https://user-images.githubusercontent.com/99091066/163494797-8dfad23c-5ae3-4d26-851e-542ebe7f1ef9.png">
 
