@@ -111,7 +111,9 @@ Sharpe ratios are used to analyze excess return per unit of risk.
 
 Generally, a higher sharpe ratio indicates a higher return given the level of risk that was taken. By this definition, XRP indicates a higher investment return per unit of risk compared to its counterparties. Tron also has a very high sharpe ratio at 45.183.
 
-Compared to the benchmark, Solana and Fantom fall short. 
+Based on the findings of the Sharpe ratio alone, it is fair to say that XRP generally has a higher risk adjusted performance compared to the other tokens.
+
+When comparing to the benchmark, Solana and Fantom fall short. 
 
 ### Beta & Rolling Beta
 
