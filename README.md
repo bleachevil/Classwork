@@ -97,7 +97,13 @@ The balanced ETF column was combined with the `all_coins_df` dataframe.
 
 
 
-**** ADD EXPECTED RETURN VS RISK GRAPH******
+<img width="784" alt="Screen Shot 2022-04-14 at 7 24 17 PM" src="https://user-images.githubusercontent.com/99091066/163492704-8b371c5b-1b78-4b0e-a8cd-02d1d3421248.png">
+
+Each token was plotted on a graph showing its risk/return. Depending on the individual's objectives, one who is risk averse would select tokens with higher return given a lower risk. For this investor, tokens such as Tron would be a suitable investment. 
+individuals with a higher risk appetite would prefer Fantom as it has the highest risk and return amongst the other tokens.
+
+Based on this chart, XRP and Polymath would not be a good investmemt since they have a relatively large risk and lower return.
+
 
 ### Sharpe Ratios
 
@@ -127,6 +133,14 @@ The rapid increase in prices would cause uncertainty in the markets and fears th
 The other tokens are relatively steady, hovering around a beta of 0. 
 
 ### Monte Carlo Simulation
+
+The Monte Carlo simulation models risk using possible results/simulations. The model would be a helpful tool in evaluation the performance of tokens because it can predict future outcomes.
+
+Given that we have only two years of data, we decided to run the simulation for 30 days. 
+
+ > We used 5% of the date range we used , in other words 5% of 730 days or 36 days. We decided to use 1 whole month.
+
+Using the formulas and functions in [ratio.py](https://github.com/bleachevil/Classwork/blob/f88b8ef9929a5e53206270f5fea80ab7c2ad4ae1/Ratio.py) , we conducted a simulation for each of the eight tokens.
 
 
 
