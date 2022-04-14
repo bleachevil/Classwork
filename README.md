@@ -82,6 +82,48 @@ The Prices, Market Cap, and Volume dataframes were all combined into one datafra
 
 # ANALYSIS
 
+In order to compare the tokens, we constructed a balanced ETF to use as a benchmark. 
+To do this, we used an arbitrary investment amount `$1000` and divided the investment amount equally amongst the tokens to get `125` per token. We then used `125` and divided this value by the closing prices for each token.
+
+<img width="280" alt="Screen Shot 2022-04-14 at 5 54 58 PM" src="https://user-images.githubusercontent.com/99091066/163482911-f4f5bafb-ad56-4945-9350-b0154f765a80.png">
+
+For the first data point, April 11th, all tokens have an equal $125. Then depending on the fluctuation in token prices, the balanced ETF either increases or decreases according to the sum of the values. 
+
+<img width="724" alt="Screen Shot 2022-04-14 at 5 59 29 PM" src="https://user-images.githubusercontent.com/99091066/163483337-2b340d9e-4f3a-4dab-af23-824512350bd9.png">
+
+The balanced ETF column was combined with the `all_coins_df` dataframe.
+
+<img width="625" alt="Screen Shot 2022-04-14 at 5 59 53 PM" src="https://user-images.githubusercontent.com/99091066/163483384-391d7ae3-16cd-41d2-a656-c53f427450b4.png">
+
+
+
+**** ADD EXPECTED RETURN VS RISK GRAPH******
+
+### Sharpe Ratios
+
+Using the [ratio.py](https://github.com/bleachevil/Classwork/blob/f88b8ef9929a5e53206270f5fea80ab7c2ad4ae1/Ratio.py) file we created to simplify functions and formulas, we calculated the sharpe ratios on the `all_coins_df` dataframe. 
+Sharpe ratios are used to analyze excess return per unit of risk. 
+
+
+<img width="830" alt="Screen Shot 2022-04-14 at 6 09 50 PM" src="https://user-images.githubusercontent.com/99091066/163484367-076ce358-f247-491f-930d-c1e9877fe692.png">
+
+ > Descending Order: XRP, Tron, Ethereum, Cronos, Binance, Polymath, Solana, and Fantom.
+
+Generally, a higher sharpe ratio indicates a higher return given the level of risk that was taken. By this definition, XRP indicates a higher investment return per unit of risk compared to its counterparties. Tron also has a very high sharpe ratio at 45.183.
+
+Compared to the benchmark, Solana and Fantom fall short. 
+
+### Beta & Rolling Beta
+
+
+
+
+
+
+
+
+
+
 
 
 
