@@ -19,6 +19,20 @@ For this project, we used Coingecko to gather data on 8 transaction tokens in ho
  * Poly
  * XRP
 
+## QUESTIONS WE HOPE TO ANSWER
+
+* Which token provides the highest returns?
+
+* Which token is the least / most risky?
+
+* Which token has better future projections?
+
+* How do these compare to a benchmark?
+
+* Based on these findings, which exchange would be most rewarding?
+
+
+
 # THE TEAM 
 
 Amira Ali | Jeff Zhang | Nadeem Hassan 
