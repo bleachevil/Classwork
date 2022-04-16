@@ -318,5 +318,46 @@ For an initial investment of $125, we can say with 95% confidence that it will b
 This investment is safe since the range is not large.
 
 
+## PRODUCT 
+
+Circling back to our main objective, our team created an evaluation tool that other investors could use before investing to understand which token best suits their needs. 
+
+Using the data we analysed above, we ranked each factor and token. 
+
+### Guidlines
+
+* Sharpe Ratio: measures risk adjusted returns 
+ 
+ > A higher sharpe ratio, the better the investment's returns
+
+* Lower bounds : based on an investment and condfidence interval, the minimum amount one can expect in the future.
+
+ > The higher a lower bound, the better. We want the minimum amount to still be high.
+
+* Upper bounds : based on an investment and confidence interval, the maximum amount we can expect in the future 
+
+ > The higher the upper bound, the better. 
+
+* Risk : refers to the degree of uncertainty of an investment 
+
+ >  Risk appetite differs amongst each investor. Some are comfortable taking on more risk than others. Based on the "low risk high return" principle, we ranked tokens that are higher risk, a lower rank.
+
+* Expected Return : the expected return on your investment
+
+ > The higher the better
+
+
+Based on these guidlines, we ranked each token. 
+
+<img width="915" alt="image" src="https://user-images.githubusercontent.com/99091066/163688902-5a214a17-0cb1-4efb-9a5b-7a08e580cd35.png">
+
+
+
+
+
+
+
+
+
 
 
