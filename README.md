@@ -29,9 +29,6 @@ For this project, we used Coingecko to gather data on 8 transaction tokens in ho
 
 * How do these compare to a benchmark?
 
-* Based on these findings, which exchange would be most rewarding?
-
-
 
 # THE TEAM 
 
