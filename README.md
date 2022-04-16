@@ -137,6 +137,8 @@ all_coins_df
   > We concatenated the data together and dropped null values. The combined dataframes were renamed as `all_coins_df`, `all_vol_df` , `all_MC_df`
 
 
+### Volumes and Market Capitalization
+
 Each token's price, volume, and market capitalization were plotted using plotly and exported to a dashboard that can be found in [here](https://github.com/bleachevil/Classwork/blob/c843ab0daab4022152c153559c40a695e285a966/Combining.ipynb)
 
 Example : Solana
