@@ -4,7 +4,7 @@ A cryptocurrency is a digital currency that serves as a store of value and mediu
 
 Since Bitcoin's release in 2009, cryptocurrencies have gained popularity and are now used as a common method of payment.
 
-Creating a product for a blockchain requires several steps, one being to recognize which platform is most suitable for the product, given trends, market conditions, prices and future projections.
+Creating a product for a blockchain requires several steps, one being to recognize which platform is most suitable for the product, given trends, market conditions, prices, and future projections.
 
 For this project, we used Coingecko to gather data on 8 transaction tokens in hopes to create an evaluation tool for each token to help investors understand which blockchain best suits their needs. This evaluation tool can be used for those who are introducing products to the blockchain.
 
