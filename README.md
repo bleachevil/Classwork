@@ -234,10 +234,27 @@ We calculated and plotted the 30 day rolling beta for each token, using 730 trad
 
 The rapid increase in prices would cause uncertainty in the markets and fears that the bubble would eventually burst. 
 
+```python
+## Beta
+rolling = 30
+xrp_beta = pd.DataFrame(r.beta(all_coins_df['XRP'],all_coins_df['Balanced ETF'],rolling)).rename(columns={0:"XRP"})
+sol_beta = pd.DataFrame(r.beta(all_coins_df['Solana'],all_coins_df['Balanced ETF'],rolling)).rename(columns={0:"Solana"})
+tron_beta = pd.DataFrame(r.beta(all_coins_df['Tron'],all_coins_df['Balanced ETF'],rolling)).rename(columns={0:"Tron"})
+poly_beta = pd.DataFrame(r.beta(all_coins_df['PolyMath'],all_coins_df['Balanced ETF'],rolling)).rename(columns={0:"PolyMath"})
+ftm_beta = pd.DataFrame(r.beta(all_coins_df['Fantom'],all_coins_df['Balanced ETF'],rolling)).rename(columns={0:"Fantom"})
+eth_beta = pd.DataFrame(r.beta(all_coins_df['Ethereum'],all_coins_df['Balanced ETF'],rolling)).rename(columns={0:"Ethereum"})
+cro_beta = pd.DataFrame(r.beta(all_coins_df['Cronos'],all_coins_df['Balanced ETF'],rolling)).rename(columns={0:"Cronos"})
+bnb_beta = pd.DataFrame(r.beta(all_coins_df['Binance'],all_coins_df['Balanced ETF'],rolling)).rename(columns={0:"Binance"})
 
-<img width="832" alt="Screen Shot 2022-04-14 at 6 37 15 PM" src="https://user-images.githubusercontent.com/99091066/163489062-c570ff8a-82ec-49d3-bf75-26d59a1a55cd.png">
+total_beta = pd.concat([xrp_beta,sol_beta,tron_beta,poly_beta,ftm_beta,eth_beta,cro_beta,bnb_beta],axis=1)
+total_beta.dropna(inplace=True)
+total_beta.plot(figsize = (20, 10),title = "Rolling "+ str(rolling)+"-day Beta of All Tokens")
+```
 
-The other tokens are relatively steady, hovering around a beta of 0. 
+<img width="720" alt="Screen Shot 2022-04-16 at 3 18 53 PM" src="https://user-images.githubusercontent.com/99091066/163688551-ff292a15-bf42-45b3-ac4d-dfd9f10b42ba.png">
+
+
+ > The other tokens are relatively steady, hovering around a beta of 0. 
 
 ### Monte Carlo Simulation
 
