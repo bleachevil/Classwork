@@ -6,7 +6,7 @@ Since Bitcoin's release in 2009, cryptocurrencies have gained popularity and are
 
 Creating a product for a blockchain requires several steps, one being to recognize which platform is most suitable for the product, given trends, market conditions, prices, and future projections.
 
-For this project, we used Coingecko to gather data on 8 transaction tokens in hopes to create an evaluation tool for each token to help investors understand which blockchain best suits their needs. This evaluation tool can be used for those who are introducing products to the blockchain.
+For this project, we used Coingecko to gather data on 8 transaction tokens in hopes to create an evaluation tool for each token to help investors understand which blockchain best suits their needs. This evaluation tool can be helpful for those who are introducing products to the blockchain.
 
 ## Tokens to Analyze 
  
