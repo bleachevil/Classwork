@@ -212,7 +212,13 @@ Using the [ratio.py](https://github.com/bleachevil/Classwork/blob/f88b8ef9929a5e
 Sharpe ratios are used to analyze excess return per unit of risk. 
 
 
-<img width="830" alt="Screen Shot 2022-04-14 at 6 09 50 PM" src="https://user-images.githubusercontent.com/99091066/163484367-076ce358-f247-491f-930d-c1e9877fe692.png">
+```python
+## Sharpe Ratio
+sharpe_rate = r.sharpe_rate(all_coins_df)
+sharpe_rate
+```
+
+<img width="707" alt="Screen Shot 2022-04-16 at 3 17 14 PM" src="https://user-images.githubusercontent.com/99091066/163688495-3f4a68c4-d6c9-4d21-aca2-f50dbe96aedb.png">
 
  > Descending Order: XRP, Tron, Ethereum, Cronos, Binance, Polymath, Solana, and Fantom.
 
