@@ -45,7 +45,7 @@ def markowitz(df):
 
 def plot_MC(df,name, num_days): 
     #df = get_data(ticker, start_date, end_date)
-    initial_price = 1000 #df.iloc[-1].values[0]
+    initial_price = 125 #df.iloc[-1].values[0]
 
     pct_changes = df.pct_change()
     pct_changes.dropna(inplace=True)
