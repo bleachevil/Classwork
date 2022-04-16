@@ -347,16 +347,62 @@ Using the data we analysed above, we ranked each factor and token.
  > The higher the better
 
 
+
 Based on these guidlines, we ranked each token. 
 
 <img width="915" alt="image" src="https://user-images.githubusercontent.com/99091066/163688902-5a214a17-0cb1-4efb-9a5b-7a08e580cd35.png">
 
 
+In order to visualize each factor with its respective ranks, we plot our findings using a scatter polar plot.
+
+```python
+
+categories = ['Sharpe Ratio', 'Risk', 'Exp Return', 'low_bound', 'high_bound']
+categories = [*categories, categories[0]]
+
+XRP =         [8, 4, 1, 4, 4]
+Solana =      [2, 2, 7, 3, 7]
+Tron =        [7, 7, 2, 7, 1]
+PolyMath =    [3, 3, 5, 2, 6]
+Fantom =      [1, 1, 8, 1, 8]
+Eth =         [6, 8, 4, 8, 2]
+Cronos =      [5, 6, 3, 5, 3]
+Binance =     [4, 5, 6, 6, 5]
 
 
+XRP = [*XRP, XRP[0]]
+Tron = [*Tron, Tron[0]]
+Eth = [*Eth, Eth[0]]
+Cronos = [*Cronos, Cronos[0]]
+Binance = [*Binance, Binance[0]]
+PolyMath = [*PolyMath, PolyMath[0]]
+Solana = [*Solana, Solana[0]]
+Fantom = [*Fantom, Fantom[0]]
+
+fig = go.Figure(
+    data=[
+        go.Scatterpolar(r=XRP, theta=categories, fill='toself', name='XRP'),
+        go.Scatterpolar(r=Tron, theta=categories, fill='toself', name='Tron'),
+        go.Scatterpolar(r=Eth, theta=categories, fill='toself', name='Eth'),
+        go.Scatterpolar(r=Cronos, theta=categories, fill='toself', name='Cronos'),
+        go.Scatterpolar(r=Binance, theta=categories, fill='toself', name='Binance'),
+        go.Scatterpolar(r=PolyMath, theta=categories, fill='toself', name='PolyMath'),
+        go.Scatterpolar(r=Solana, theta=categories, fill='toself', name='Solana'),
+        go.Scatterpolar(r=Fantom, theta=categories, fill='toself', name='Fantom'),
+    ],
+    layout=go.Layout(
+        title=go.layout.Title(text='Coins comparison'),
+        polar={'radialaxis': {'visible': True}},
+        showlegend=True
+    )
+)
+
+pyo.plot(fig)
+
+```
 
 
-
+<img width="858" alt="Screen Shot 2022-04-16 at 3 34 16 PM" src="https://user-images.githubusercontent.com/99091066/163689015-6555c3cd-267a-42de-8b9d-feca4ee4316e.png">
 
 
 
