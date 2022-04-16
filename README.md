@@ -411,6 +411,6 @@ Tokens that meet the "low risk, high return" principle would be Fantom, Solana, 
 
 # CONCLUSION
 
-Our goal was to create an evaluation tool that other investors could use before investing to understand which token and blockchains best suits their needs. Each investor has their own risk appetite, therefore we cannot conclude which token is the "best" perse, these judgments and conclusions can be made by each individual depending on their own personal objectives. We can say that Binance seems to have the most balance compared to the other tokens. There is not much of a skew to one particular factor, as there are with other tokens, for example Fantom.
+Our goal was to create an evaluation tool that other investors could use before investing to understand which token and blockchains best suits their needs. Each investor has their own risk appetite, therefore we cannot conclude which token is the "best" perse, these judgments and conclusions can be made by each individual depending on their own personal objectives. We can say that Binance seems to have the most balance compared to the other tokens. There is not much of a skew to one particular factor as there are with other tokens, for example Fantom.
 
 
