@@ -6,7 +6,7 @@ Since Bitcoin's release in 2009, cryptocurrencies have gained popularity and are
 
 Creating a product for a blockchain requires several steps, one being to recognize which platform is most suitable for the product, given trends, market conditions, prices and future projections.
 
-For this project, we used Coingecko to gather data on 8 transaction tokens in hopes to identify which platform is the most rewarding, given the performance of their top transaction tokens. This evaluation tool can be used for those who are introducing products to the blockchain.
+For this project, we used Coingecko to gather data on 8 transaction tokens in hopes to create an evaluation tool for each token to help investors understand which blockchain best suits their needs. This evaluation tool can be used for those who are introducing products to the blockchain.
 
 ## Tokens to Analyze 
  
@@ -320,8 +320,6 @@ This investment is safe since the range is not large.
 
 ## PRODUCT 
 
-Circling back to our main objective, our team created an evaluation tool that other investors could use before investing to understand which token best suits their needs. 
-
 Using the data we analysed above, we ranked each factor and token. 
 
 ### Guidlines
@@ -405,5 +403,12 @@ pyo.plot(fig)
 <img width="858" alt="Screen Shot 2022-04-16 at 3 34 16 PM" src="https://user-images.githubusercontent.com/99091066/163689015-6555c3cd-267a-42de-8b9d-feca4ee4316e.png">
 
 
+The figure is interactive and allows users to select or deselect tokens to see how they rank amongst others. 
+
+Tokens that meet the "low risk, high return" principle would be Fantom, Solana, and Binance. 
+
+# CONCLUSION
+
+Our goal was to create an evaluation tool that other investors could use before investing to understand which token and blockchains best suits their needs. Each investor has their own risk appetite, therefore we cannot conclude which token is the "best" perse, these judgments and conclusions can be made by each individual depending on their own personal objectives. We can say that Binance seems to have the most balance compared to the other tokens. There is not much of a skew to one particular factor, as there are with other tokens, for example Fantom.
 
 
