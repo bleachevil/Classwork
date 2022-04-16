@@ -136,7 +136,7 @@ all_coins_df
 
 ### Volumes and Market Capitalization
 
-Each token's price, volume, and market capitalization were plotted using plotly and exported to a dashboard that can be found in [here](https://github.com/bleachevil/Classwork/blob/c843ab0daab4022152c153559c40a695e285a966/Combining.ipynb)
+Each token's price, volume, and market capitalization were plotted using plotly and exported to a dashboard that can be found [here](https://github.com/bleachevil/Classwork/blob/c843ab0daab4022152c153559c40a695e285a966/Combining.ipynb)
 
 Example : Solana
 
