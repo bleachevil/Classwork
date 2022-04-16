@@ -46,6 +46,23 @@ Amira Ali | Jeff Zhang | Nadeem Hassan
 
   > Python, Jupyter Notebook, Coingecko API, Plotly for visualization purposes. 
 
+## Custom made function 
+
+ > Rato.py, helper_functions.py
+
+### Ratio.py
+
+Ratio.py contained the following function:
+
+ * Sharp ratio 
+ * Beta
+ * Efficient frontier (Markowitz bullet)
+ * Monte Carlo Simulation
+
+### helper_function.py
+
+helper_function.py contained the function to convert the csv data into dataframe and used in the data_clean.ipynb.
+
 
 # DATA 
 
@@ -75,7 +92,11 @@ Poly: `polyprice`, `volpoly`, `polyMC`
 XRP: `ripprice`, `volrip`, `ripMC` ( The coingecko api ID for XRP is Ripple) 
 
 An excerpt of the code below shows our method of calling the XRP price by its coingecko ID, expressed in the currency, and the number data points we needed. We then changed `historic_pricerip` into a dataframe and called the Prices and Time columns.
-
+```
+historic_pricerip = cg.get_coin_market_chart_by_id("ripple", "usd", 730)
+ripprice=pd.DataFrame(historic_pricerip['prices'], columns=['Time','XRP Price'])
+ripprice
+```
 
 <img width="743" alt="Screen Shot 2022-04-14 at 4 33 58 PM" src="https://user-images.githubusercontent.com/99091066/163470971-5f9315aa-e3be-468b-9fcc-43c42cc7cc2f.png">
 
