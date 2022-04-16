@@ -90,20 +90,49 @@ XRP: `ripprice`, `volrip`, `ripMC` ( The coingecko api ID for XRP is Ripple)
 
 An excerpt of the code below shows our method of calling the XRP price by its coingecko ID, expressed in the currency, and the number data points we needed. We then changed `historic_pricerip` into a dataframe and called the Prices and Time columns.
 
+```python 
+historic_pricerip = cg.get_coin_market_chart_by_id("ripple", "usd", 730)
+ripprice=pd.DataFrame(historic_pricerip['prices'], columns=['Time','XRP Price'])
+ripprice 
+```
 
-<img width="743" alt="Screen Shot 2022-04-14 at 4 33 58 PM" src="https://user-images.githubusercontent.com/99091066/163470971-5f9315aa-e3be-468b-9fcc-43c42cc7cc2f.png">
+<img width="176" alt="Screen Shot 2022-04-16 at 2 56 21 PM" src="https://user-images.githubusercontent.com/99091066/163687927-6402565a-4cf0-44b1-a8f2-604d8f320375.png">
+
+
+
+
+
 
 The prices, market cap, and volume data for each token was then converted to a CSV file and pushed to github for cleaning & analysis. This can be found in the Data folder.
 
 The Prices, Market Cap, and Volume dataframes were all combined into one dataframe.
 
-<img width="1111" alt="Screen Shot 2022-04-14 at 4 46 46 PM" src="https://user-images.githubusercontent.com/99091066/163472580-70ce2d28-a546-4494-9dd2-c98134ce47ae.png">
+```python
+all_vol_df = pd.concat([solana_vol_df, bnb_vol_df, cron_vol_df, eth_vol_df, fantom_vol_df, poly_vol_df, tron_vol_df,xrp_vol_df], axis = 1)
+all_vol_df.dropna(inplace = True)
+all_vol_df
+``` 
 
-<img width="1111" alt="Screen Shot 2022-04-14 at 4 48 42 PM" src="https://user-images.githubusercontent.com/99091066/163472799-4c85d117-e413-471e-b0a3-16af85ba90bd.png">
+<img width="702" alt="Screen Shot 2022-04-16 at 2 58 15 PM" src="https://user-images.githubusercontent.com/99091066/163687985-d4ea3f6b-fb4d-42c6-ac89-88f8715e9809.png">
 
-<img width="1090" alt="Screen Shot 2022-04-14 at 4 52 49 PM" src="https://user-images.githubusercontent.com/99091066/163473323-2620788e-accc-481e-aa75-8c6912b50e04.png">
 
-<img width="1103" alt="Screen Shot 2022-04-14 at 4 53 17 PM" src="https://user-images.githubusercontent.com/99091066/163473372-78593ee6-7167-46c8-8378-2d288fb67028.png">
+```python 
+all_MC_df = pd.concat([solana_MC_df, bnb_MC_df, cron_MC_df, eth_MC_df, fantom_MC_df, poly_MC_df, tron_MC_df,xrp_MC_df], axis = 1)
+all_MC_df.dropna(inplace = True)
+all_MC_df
+```
+
+<img width="701" alt="Screen Shot 2022-04-16 at 2 58 56 PM" src="https://user-images.githubusercontent.com/99091066/163688009-b5c27e6b-5a1c-459c-ba65-c42ec2a7592c.png">
+
+
+```python 
+all_coins_df = pd.read_csv('all_coins.csv')
+all_coins_df.rename({'XRP Price': 'XRP', 'Solana Price': 'Solana', 'Tron Price': 'Tron', 'PolyMath Price': 'PolyMath', 'Fantom Price': 'Fantom'
+                               , 'Ethereum Price': 'Ethereum', 'Cronos Price': 'Cronos', 'Binance Price': 'Binance'}, axis = 1, inplace=True)
+all_coins_df
+```
+
+<img width="566" alt="Screen Shot 2022-04-16 at 3 00 21 PM" src="https://user-images.githubusercontent.com/99091066/163688047-e0ff653c-be1b-48cd-b25e-ea2637d02255.png">
 
   > We concatenated the data together and dropped null values. The combined dataframes were renamed as `all_coins_df`, `all_vol_df` , `all_MC_df`
 
