@@ -407,6 +407,11 @@ The figure is interactive and allows users to select or deselect tokens to see h
 
 Tokens that meet the "low risk, high return" principle would be Fantom, Solana, and Binance. 
 
+#### Binance
+
+<img width="859" alt="Screen Shot 2022-04-16 at 3 48 44 PM" src="https://user-images.githubusercontent.com/99091066/163689398-7dca27c4-9600-4ce2-bc61-cd619b8cca75.png">
+
+
 # CONCLUSION
 
 Our goal was to create an evaluation tool that other investors could use before investing to understand which token and blockchains best suits their needs. Each investor has their own risk appetite, therefore we cannot conclude which token is the "best" perse, these judgments and conclusions can be made by each individual depending on their own personal objectives. We can say that Binance seems to have the most balance compared to the other tokens. There is not much of a skew to one particular factor, as there are with other tokens, for example Fantom.
