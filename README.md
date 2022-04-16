@@ -200,7 +200,7 @@ all_coins_df
 Each token was plotted on a graph showing its risk/return. Depending on the individual's objectives, one who is risk averse would select tokens with higher return given a lower risk. For this investor, tokens such as Tron would be a suitable investment. 
 individuals with a higher risk appetite would prefer Fantom as it has the highest risk and return amongst the other tokens.
 
-Based on this chart, XRP and Polymath would not be a good investmemt since they have a relatively large risk and lower return according to the "low risk and high return" principle.
+Based on this chart and the "low risk and high return" principle, XRP and Polymath would not be a good investment since they have a relatively large risk and lower return.
 
 
 ### Sharpe Ratios
