@@ -46,23 +46,6 @@ Amira Ali | Jeff Zhang | Nadeem Hassan
 
   > Python, Jupyter Notebook, Coingecko API, Plotly for visualization purposes. 
 
-## CUSTOM MADE FUNCTION 
-
- > Rato.py, helper_functions.py
-
-### Ratio.py
-
-Ratio.py contained the following function:
-
- * Sharp ratio 
- * Beta
- * Efficient frontier (Markowitz bullet)
- * Monte Carlo Simulation
-
-### helper_function.py
-
-helper_function.py contained the function to convert the csv data into dataframe and used in the data_clean.ipynb.
-
 
 # DATA 
 
@@ -92,11 +75,7 @@ Poly: `polyprice`, `volpoly`, `polyMC`
 XRP: `ripprice`, `volrip`, `ripMC` ( The coingecko api ID for XRP is Ripple) 
 
 An excerpt of the code below shows our method of calling the XRP price by its coingecko ID, expressed in the currency, and the number data points we needed. We then changed `historic_pricerip` into a dataframe and called the Prices and Time columns.
-```
-historic_pricerip = cg.get_coin_market_chart_by_id("ripple", "usd", 730)
-ripprice=pd.DataFrame(historic_pricerip['prices'], columns=['Time','XRP Price'])
-ripprice
-```
+
 
 <img width="743" alt="Screen Shot 2022-04-14 at 4 33 58 PM" src="https://user-images.githubusercontent.com/99091066/163470971-5f9315aa-e3be-468b-9fcc-43c42cc7cc2f.png">
 
@@ -177,82 +156,57 @@ Given that we have only two years of data, we decided to run the simulation for 
 
 Using the formulas and functions in [ratio.py](https://github.com/bleachevil/Classwork/blob/f88b8ef9929a5e53206270f5fea80ab7c2ad4ae1/Ratio.py) , we conducted a simulation for each of the eight tokens.
 
+### XRP 
+ <img width="821" alt="Screen Shot 2022-04-16 at 11 41 37 AM" src="https://user-images.githubusercontent.com/99091066/163681490-d3125f4f-671a-4279-8fc1-bf361919be47.png">
+ 
+ For an initial investment of $125, we can say with 95% confidence that it will be valued between $31.89 to $250.37 in the next month.
+ In other words, an investment in XRP has the potential to double the initial investment.
+ 
+ ### Solana 
+ 
+<img width="825" alt="Screen Shot 2022-04-16 at 11 41 52 AM" src="https://user-images.githubusercontent.com/99091066/163681497-7faa745c-0c86-4157-b922-aba3b37529e2.png">
 
-<img width="819" alt="Screen Shot 2022-04-14 at 7 32 43 PM" src="https://user-images.githubusercontent.com/99091066/163493287-45c828ce-f8f7-4d59-9244-421a8c27da3d.png">
+For an initial investment of $125, we can say with 95% confidence that it will be valued between $10.744 to $332.24 in the next month. The range is fairly high, making this investment risky.
 
-<img width="821" alt="Screen Shot 2022-04-14 at 7 33 00 PM" src="https://user-images.githubusercontent.com/99091066/163493306-b2994397-02df-4827-ad65-935e9e9cc0b7.png">
+#### Tron
 
-<img width="819" alt="Screen Shot 2022-04-14 at 7 33 54 PM" src="https://user-images.githubusercontent.com/99091066/163493371-e6cd8a45-24b6-4604-93f0-d097e8f8b716.png">
+<img width="821" alt="Screen Shot 2022-04-16 at 11 42 04 AM" src="https://user-images.githubusercontent.com/99091066/163681506-882fb829-5d2a-4701-9ea7-787f611eb9ac.png">
 
-<img width="826" alt="Screen Shot 2022-04-14 at 7 34 14 PM" src="https://user-images.githubusercontent.com/99091066/163493394-cebf08fe-8e40-4195-b0de-049fc3589f02.png">
-
-<img width="822" alt="Screen Shot 2022-04-14 at 7 34 36 PM" src="https://user-images.githubusercontent.com/99091066/163493418-b08c88f0-017c-40c7-9e82-c622d1c0adc4.png">
-
-<img width="818" alt="Screen Shot 2022-04-14 at 7 37 52 PM" src="https://user-images.githubusercontent.com/99091066/163493631-4c108d8e-3aa5-4f8f-8b33-49226ee33551.png">
-
-<img width="816" alt="Screen Shot 2022-04-14 at 7 38 12 PM" src="https://user-images.githubusercontent.com/99091066/163493655-2a0baced-2e04-428d-9b9d-828d75d9ca88.png">
-
-<img width="825" alt="Screen Shot 2022-04-14 at 7 38 33 PM" src="https://user-images.githubusercontent.com/99091066/163493677-f8a94324-23a5-4572-af0e-1249c67ba669.png">
-
-
-
-***** MONTE CARLO ANALYSIS 
-
-
-## Plot Volume & Market Caps
-
-For each token, volume and market caps were plotted using plotly.
-
-### Solana 
-
-
-<img width="456" alt="Screen Shot 2022-04-14 at 7 48 47 PM" src="https://user-images.githubusercontent.com/99091066/163494410-272510a1-e630-456a-b853-5ee92f6f3a09.png">
-<img width="465" alt="Screen Shot 2022-04-14 at 7 49 04 PM" src="https://user-images.githubusercontent.com/99091066/163494422-e23b0d58-b3b3-401c-a25f-9bd553eb7d90.png">
-
-
-### Binance 
-
-<img width="459" alt="Screen Shot 2022-04-14 at 7 49 36 PM" src="https://user-images.githubusercontent.com/99091066/163494462-66e5008e-0c0b-45b1-8e7c-b0433f29c54d.png">
-
-<img width="461" alt="Screen Shot 2022-04-14 at 7 49 56 PM" src="https://user-images.githubusercontent.com/99091066/163494491-ba9839aa-d731-4a45-af8f-e565f5236940.png">
-
-
-### Cronos
-
-<img width="452" alt="Screen Shot 2022-04-14 at 7 50 17 PM" src="https://user-images.githubusercontent.com/99091066/163494519-6f91e608-94a6-40b3-86f8-ac2d8a27c1c5.png">
-
-<img width="444" alt="Screen Shot 2022-04-14 at 7 50 37 PM" src="https://user-images.githubusercontent.com/99091066/163494533-c9878a77-7443-4513-a534-d20c62085356.png">
-
-### Ethereum
-
-<img width="443" alt="Screen Shot 2022-04-14 at 7 51 05 PM" src="https://user-images.githubusercontent.com/99091066/163494567-83df802d-1f9f-46cf-b9bc-4b0b5da02b76.png">
-
-<img width="448" alt="Screen Shot 2022-04-14 at 7 51 33 PM" src="https://user-images.githubusercontent.com/99091066/163494610-8a91071a-14e5-4c68-8b32-75a1d3bd8db1.png">
-
-
-### Fantom
-
-<img width="438" alt="Screen Shot 2022-04-14 at 7 52 04 PM" src="https://user-images.githubusercontent.com/99091066/163494651-a8d0f518-8d99-466c-b791-4173862db954.png">
-
-<img width="433" alt="Screen Shot 2022-04-14 at 7 52 17 PM" src="https://user-images.githubusercontent.com/99091066/163494672-f632c115-2266-4491-8441-ac89930ebc26.png">
+For an initial investment of $125, we can say with 95% confidence that it will be valued between $55.79 and $218.30 in the next month. The range is modest, with the lower bound still being less than half of the initial investment.
 
 ### Polymath
 
-<img width="457" alt="Screen Shot 2022-04-14 at 7 52 32 PM" src="https://user-images.githubusercontent.com/99091066/163494687-353f221a-ad6a-4567-8821-d6a5efff6d78.png">
 
-<img width="456" alt="Screen Shot 2022-04-14 at 7 52 52 PM" src="https://user-images.githubusercontent.com/99091066/163494719-699c0c54-4b46-4cea-8363-1e106c0774bb.png">
+<img width="820" alt="Screen Shot 2022-04-16 at 11 42 39 AM" src="https://user-images.githubusercontent.com/99091066/163681535-d607419d-83c1-456f-af23-654e6198223c.png">
 
-### Tron
+For an initial investment of $125, we can say with 95% confidence that it will be valued between $7.13 and $303.35 in the next month. The range is large and the investment can oscillate between high and low. 
 
-<img width="451" alt="Screen Shot 2022-04-14 at 7 53 16 PM" src="https://user-images.githubusercontent.com/99091066/163494744-78d66908-f7c8-4497-a373-5c24063335ba.png">
+### Fantom
 
-<img width="446" alt="Screen Shot 2022-04-14 at 7 53 31 PM" src="https://user-images.githubusercontent.com/99091066/163494766-1a2a4f2e-a47f-4092-b1b4-ad3348c6bf8a.png">
+<img width="820" alt="Screen Shot 2022-04-16 at 11 42 58 AM" src="https://user-images.githubusercontent.com/99091066/163681542-9735e912-fc13-4180-9e39-3a35383be2f6.png">
 
-### XRP
+For an initial investment of $125, we can say with 95% confidence that it will be valued between -$45.38 to $425.80 in the next month. There is a possibilty of losing your entire investment with Fantom, or earning almost triple the initial investment. This would be a consideribly risky investment.
 
-<img width="444" alt="Screen Shot 2022-04-14 at 7 54 03 PM" src="https://user-images.githubusercontent.com/99091066/163494797-8dfad23c-5ae3-4d26-851e-542ebe7f1ef9.png">
+### Ethereum
 
-<img width="454" alt="Screen Shot 2022-04-14 at 7 54 26 PM" src="https://user-images.githubusercontent.com/99091066/163494824-98f6c196-8b10-4a19-a00a-0ff13d7723ae.png">
+<img width="824" alt="Screen Shot 2022-04-16 at 11 43 20 AM" src="https://user-images.githubusercontent.com/99091066/163681557-1007678d-1de5-4ccf-b52b-5334a2c6af85.png">
+
+For an initial investment of $125, we can say with 95% confidence that it will be valued between $66.644 and $225.82 in the next month. The range is fairly modest and the lower bound is more than half of the initial investment.
+
+#### Cronos
+
+<img width="821" alt="Screen Shot 2022-04-16 at 11 43 32 AM" src="https://user-images.githubusercontent.com/99091066/163681561-bbd7dfff-2d19-4a55-944e-a1aab72ebb78.png">
+
+For an initial investment of $125, we can say with 95% confidence that it will be valued between $43.32 and $246.11 in the next month. Cronos' range is not large enough to raise concern about risk. The upper bound is decent.
+
+#### Binance
+
+
+<img width="822" alt="Screen Shot 2022-04-16 at 11 43 50 AM" src="https://user-images.githubusercontent.com/99091066/163681577-c7f38473-65af-45e0-b8c7-366c8087ab32.png">
+
+For an initial investment of $125, we can say with 95% confidence that it will be valued between $46.56 and $255.77 in the next month.
+This investment is safe since the range is not large.
+
 
 
 
