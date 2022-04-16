@@ -137,6 +137,18 @@ all_coins_df
   > We concatenated the data together and dropped null values. The combined dataframes were renamed as `all_coins_df`, `all_vol_df` , `all_MC_df`
 
 
+Each token's price, volume, and market capitalization were plotted using plotly and exported to a dashboard that can be found in [here](https://github.com/bleachevil/Classwork/blob/c843ab0daab4022152c153559c40a695e285a966/Combining.ipynb)
+
+Example : Solana
+
+<img width="821" alt="Screen Shot 2022-04-16 at 3 04 23 PM" src="https://user-images.githubusercontent.com/99091066/163688168-63d79a7d-e3eb-4f04-b940-4c782f1b992a.png">
+
+Both volume and market capitalization are important metrics when analyzing which token is suitable for each investor. 
+Volumes indicate the activity and whether the token is being bought/sold. The quantity over two years was plotted. 
+
+Market capitalization refers to the total value of each coin, calculated by the amount in circulation multiplied by the price.
+
+
 # ANALYSIS
 
 In order to compare the tokens, we constructed a balanced ETF to use as a benchmark. 
