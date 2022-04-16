@@ -47,6 +47,20 @@ Amira Ali | Jeff Zhang | Nadeem Hassan
   > Python, Jupyter Notebook, Coingecko API, Plotly for visualization purposes. 
 
 
+## CUSTOM MADE FUNCTION
+  >Rato.py, helper_functions.py
+
+### Ratio.py
+Ratio.py contained the following function:
+
+ * Sharp ratio
+ * Beta
+ * Efficient frontier (Markowitz bullet)
+ * Monte Carlo Simulation
+
+### helper_function.py
+helper_function.py contained the function to convert the csv data into dataframe and used in the data_clean.ipynb.
+
 # DATA 
 
 We were limited by multiple factors when choosing which API to fetch our data from. We expolored several platforms however either the API was not readily available or it did not have data on the tokens we were analyzing. We found that Coingecko had all the data we needed to meet our objectives. 
