@@ -156,15 +156,44 @@ Market capitalization refers to the total value of each coin, calculated by the 
 In order to compare the tokens, we constructed a balanced ETF to use as a benchmark. 
 To do this, we used an arbitrary investment amount `$1000` and divided the investment amount equally amongst the tokens to get `125` per token. We then used `125` and divided this value by the closing prices for each token.
 
-<img width="280" alt="Screen Shot 2022-04-14 at 5 54 58 PM" src="https://user-images.githubusercontent.com/99091066/163482911-f4f5bafb-ad56-4945-9350-b0154f765a80.png">
+```python
+# Number of coins per token for $125 investment in that token
+
+d = {'ticker': tickers, 'coins': coins}
+df = pd.DataFrame(data=d)
+df.set_index('ticker', inplace=True)
+df
+```
+
+<img width="139" alt="Screen Shot 2022-04-16 at 3 12 13 PM" src="https://user-images.githubusercontent.com/99091066/163688375-93e01079-bb62-476d-90c9-f3a5d55c2ac0.png">
+
+```python
+# create a portfolio value by multiplying the # of tokens to the closing price on that day. On day 1, it is exactly our initial investment of $1000.
+
+sum_df = all_coins_df.mul(coins_df.iloc[0])
+sum_df['Total'] = sum_df.sum(axis = 1)
+sum_df
+```
+
+<img width="711" alt="Screen Shot 2022-04-16 at 3 13 16 PM" src="https://user-images.githubusercontent.com/99091066/163688402-16062428-63ac-4caa-88fa-776cc7f4ea2d.png">
+
 
 For the first data point, April 11th, all tokens have an equal $125. Then depending on the fluctuation in token prices, the balanced ETF either increases or decreases according to the sum of the values. 
 
-<img width="724" alt="Screen Shot 2022-04-14 at 5 59 29 PM" src="https://user-images.githubusercontent.com/99091066/163483337-2b340d9e-4f3a-4dab-af23-824512350bd9.png">
 
 The balanced ETF column was combined with the `all_coins_df` dataframe.
 
-<img width="625" alt="Screen Shot 2022-04-14 at 5 59 53 PM" src="https://user-images.githubusercontent.com/99091066/163483384-391d7ae3-16cd-41d2-a656-c53f427450b4.png">
+```python
+# Adding the sum_df dataframe to the all_coins df for benchmarking
+
+all_coins_df['Balanced ETF'] = sum_df['Total']
+all_coins_df
+```
+
+
+<img width="605" alt="Screen Shot 2022-04-16 at 3 15 30 PM" src="https://user-images.githubusercontent.com/99091066/163688448-14044c58-b8c7-4105-8d2f-9cb81922bb93.png">
+
+
 
 ### Risk & Return
 
