@@ -53,7 +53,7 @@ Amira Ali | Jeff Zhang | Nadeem Hassan
 ### Ratio.py
 Ratio.py contained the following function:
 
- * Sharp ratio
+ * Sharpe ratio
  * Beta
  * Efficient frontier (Markowitz bullet)
  * Monte Carlo Simulation
