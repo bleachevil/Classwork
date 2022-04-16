@@ -46,7 +46,7 @@ Amira Ali | Jeff Zhang | Nadeem Hassan
 
   > Python, Jupyter Notebook, Coingecko API, Plotly for visualization purposes. 
 
-## Custom made function 
+## CUSTOM MADE FUNCTION 
 
  > Rato.py, helper_functions.py
 
