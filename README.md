@@ -34,6 +34,10 @@ For this project, we used Coingecko to gather data on 8 transaction tokens in ho
 
 Amira Ali | Jeff Zhang | Nadeem Hassan 
 
+# PRESENTATION
+
+The link to the presentation can be found [here](https://github.com/bleachevil/Classwork/blob/9eab4da6fe1dcd0594a0b144525fa1e8b6a220a4/CryptoWeb.pdf)
+
 # Tools & Resoures 
 
 ## SOFTWARE & TECHNOLOGIES USED 
