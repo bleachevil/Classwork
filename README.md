@@ -68,6 +68,8 @@ We were limited by multiple factors when choosing which API to fetch our data fr
 
 In order to have a fair evaluation tool, we had to ensure we had sufficient data for each token and a general starting point. We tested the API with different dates and tokens to decide the length of our data. All of the tokens had sufficient data from 2020 onwards, thus we decided to use 2 years worth of data (April 2020 - April 2022 ) or 730 days. 
 
+Using Coingecko's API documentation as well as Algotrading 101, we:
+
 `pip install pycoingecko` and importing `CoinGeckoAPI` gave us access to the data we needed for the analysis. 
 
 First, we pulled historical prices, market capitalization, and volumes for each token and converted those into DataFrames. 
@@ -417,4 +419,12 @@ Tokens that meet the "low risk, high return" principle would be Fantom, Solana, 
 
 Our goal was to create an evaluation tool that other investors could use before investing to understand which token and blockchains best suits their needs. Each investor has their own risk appetite, therefore we cannot conclude which token is the "best" perse, these judgments and conclusions can be made by each individual depending on their own personal objectives. We can say that Binance seems to have the most balance compared to the other tokens. There is not much of a skew to one particular factor as there are with other tokens, for example Fantom.
 
+
+## Sources
+
+https://investorplace.com/2021/01/find-other-ways-to-invest-in-cryptocurrencies-than-ethereum/
+
+https://algotrading101.com/learn/coingecko-api-guide/
+
+https://www.coingecko.com/en/api/documentation
 
